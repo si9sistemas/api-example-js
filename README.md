@@ -1,12 +1,6 @@
-# [Start Bootstrap - Landing Page](https://startbootstrap.com/template-overviews/landing-page/)
+# [Si9 Sistemas - Software para Imobiliárias](https://si9sistemas.com.br)
 
-[Landing Page](http://startbootstrap.com/template-overviews/landing-page/) is a multipurpose landing page template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
-
-## Preview
-
-[![Landing Page Preview](https://startbootstrap.com/assets/img/screenshots/themes/landing-page.png)](https://blackrockdigital.github.io/startbootstrap-landing-page/)
-
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-landing-page/)**
+[API de Leads Si9 Sistemas](https://github.com/si9sistemas/api-example-js) projeto exemplo para implementação da API de recepção de Leads, possibilita integração com terceiros e recepção de leads vindos diretamente do site.
 
 ## Status
 
@@ -18,51 +12,21 @@
 
 ## Download and Installation
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/landing-page/)
-* Install via npm: `npm i startbootstrap-landing-page`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-landing-page.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-landing-page)
+Clone o projeto para configuração e personalização 
+* Clone the repo: [Download](https://github.com/si9sistemas/api-example-js)
+* Install GULP: `npm i gulp -g`
+* Install NPM: `npm install`
+* Run Dev: `npm start`
 
 ## Usage
-
-### Basic Usage
-
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
-
-### Advanced Usage
-
-After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
-
-#### Gulp Tasks
-
-- `gulp` the default task that builds everything
-- `gulp watch` browserSync opens the project in your default browser and live reloads when changes are made
-- `gulp css` compiles SCSS files into CSS and minifies the compiled CSS
-- `gulp js` minifies the themes JS file
-- `gulp vendor` copies dependencies from node_modules to the vendor directory
-
-You must have npm installed globally in order to use this build environment.
-
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-landing-page/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/landing-page/).
-
-## About
-
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
-
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+* O arquivo `/src/js/core-leads.js` foi preparado para trabalhar como dependencia do arquivo `/src/js/new-lead.js`
+* Não sendo necessário compreender o funcionamento do arquivo de CORE, utilize para personalizações avançadas
+* Faça suas configurações e personalizações diretamente no arquivo `/src/js/new-lead.js`
+* Quando você personaliza os arquivos e roda o comando  `npm start` o GULP irá compilar e minificar ambos arquivos, deste modo você pode realizar todas configurações e testes usando este projeto e quando finalizar poderá apenas copiar e colar os arquivos minificados  `/src/js/core-leads.min.js` e `/src/js/new-lead.min.js`
+* Outro detalhe importante será inserido apenas um arquivo ao site o `new-lead.js` o `core-leads` será importado diretamente de dentro do arquivo `new-lead.js`
+* Insira o arquivo `new-lead` definindo ele como arquivo de módulo Javascript para manter seu funcionamento como descrito na etapa acima.
+* INSIRA O ARQUIVO CONFORME ESTE EXEMPLO: `<script src="./js/new-lead.min.js" type="module"></script>`
 
 ## Copyright and License
 
-Copyright 2013-2019 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/gh-pages/LICENSE) license.
+Copyright 2009-2021 Si9 Sistemas.
