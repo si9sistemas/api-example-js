@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Core Leads | Si9 Sistemas</title>
+    <link rel="shortcut icon" href="./img/favicon.ico"/>
+    <link rel="stylesheet" href="./css/style.min.css">
+
+    <!-- arquivo único de configuração API Leads -->
+    <script src="./js/new-lead.min.js" type="module"></script>
+
+</head>
+
+<body class="jumbotron" style="margin: 0;padding: 20px 90px">
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="display-4">Si9 Sistemas</h1>
+            <p class="lead">
+                <small>
+                    Api Leads | Confira a documentação completa da api<br>
+                </small>
+                <a class="btn btn-success btn-sm" style="margin-top: 10px"
+                   href="https://api.si9sistemas.com.br/imobilsi9-api/swagger-ui/" target="_blank"
+                   role="button">Documentação da Api</a>
+            </p>
+
+            <div id="imonov-person-lead"></div>
+
+            <div id="form-leads-imonov">
+                <form>
+                    <div style="max-height: 300px;overflow: auto;padding-right: 20px">
+
+                        <!-- INPUT CODE -->
+                        <input type="hidden" id="idLeadSi9">
+
+                        <div class="form-group">
+                            <label for="nameLeadSi9">Nome</label>
+                            <input type="text" id="nameLeadSi9" name="name" placeholder="Nome"
+                                   class="form-control" aria-describedby="Seu nome aqui">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="classificationLeadSi9">Classificação Interessado</label>
+                            <select class="form-control" id="classificationLeadSi9" name="classification">
+                                <option value="high" selected>Alto</option>
+                                <option value="medium">Medium</option>
+                                <option value="low">Baixo</option>
+                                <option value="future">Futuro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interestedInLeadSi9">Tipo de Interesse</label>
+                            <select class="form-control" name="interestedIn" id="interestedInLeadSi9">
+                                <option value="buy" selected>Venda</option>
+                                <option value="rent">Locação</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sourceLeadSi9">Origem (portal)</label>
+                            <input type="text" id="sourceLeadSi9" name="source"
+                                   placeholder="Origem do Lead" class="form-control"
+                                   aria-describedby="Origem do Lead">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cellNumberLeadSi9">Celular</label>
+                            <input type="text" id="cellNumberLeadSi9" name="cellNumber" placeholder="Celular"
+                                   class="form-control" aria-describedby="Celular">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phoneNumberLeadSi9">Telefone</label>
+                            <input type="text" id="phoneNumberLeadSi9" name="phoneNumber" placeholder="Telefone"
+                                   class="form-control" aria-describedby="Telefone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailLeadSi9">E-mail</label>
+                            <input type="email" id="emailLeadSi9" name="email" placeholder="E-mail"
+                                   class="form-control" aria-describedby="E-mail">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="observationLeadSi9">Observação</label>
+                            <textarea class="form-control" rows="3" id="observationLeadSi9" name="observation"
+                                      placeholder="Observation"></textarea>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-group">
+                            <label for="idImmobileProperty">id imovel</label>
+                            <input type="text" id="idImmobileProperty" name="imovel" placeholder="Imovel"
+                                   class="form-control" aria-describedby="Imovel">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="immobilePropertyObs">Observação Propriedade</label>
+                            <textarea class="form-control" rows="3" id="immobilePropertyObs" name="observation"
+                                      placeholder="Observação Propriedade"></textarea>
+                        </div>
+
+                    </div>
+
+                    <div id="imonov-lead-msg"></div>
+
+                    <br>
+
+                    <button type="button" class="btn btn-primary"
+                            onclick="actionEnviarContato()">Enviar Contato
+                    </button>
+
+                    <button type="button" class="btn btn-primary"
+                            onclick="fakeDados()">Fake Dados
+                    </button>
+
+                    <button type="button" class="btn btn-primary"
+                            onclick="setFeedbackImmobile()">Feedback Imóvel
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
